@@ -1,0 +1,224 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: hsl(0, 13%, 89%);
+    font-family: 'DM Sans';
+}
+.container {
+    max-width: 375px;
+    padding: 10px;
+}
+.container > div {
+    border-radius: 10px;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+div img {
+    max-width: 350px;
+}
+.star {
+    background-color: hsl(256, 67%, 59%);
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+.star h2 {
+    font-size: 2.7em;
+    font-weight: 400;
+    margin: 25px 50px;
+}
+.star span {
+    color: hsl(39, 100%, 71%);
+}
+.star img {
+    width: 200px;
+}
+.star > p {
+    margin-top: 2px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+.insta {
+    background-color: white;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.insta p {
+  margin: 5px;
+}
+.calendar {
+    background-color: hsl(39, 100%, 71%);
+    padding: 10px 20px 0 20px;
+    overflow: hidden;
+}
+.calendar p {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.calendar img {
+    width: 200px;
+    position: relative;
+    top: 20px;
+}
+.schedule {
+    background-color: hsl(254, 88%, 90%);
+    padding: 10px;
+    text-align: center;
+}
+.schedule img {
+    max-width: 330px;
+}
+.schedule h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.schedule p {
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.followers {
+    background-color: hsl(256, 67%, 59%);
+    text-align: center;
+    padding: 20px;
+}
+.followers img {
+    width: 250px;
+}
+.followers p {
+    font-size: 2em;
+    color: white;
+    margin: 35px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.memoji {
+    background-color: white;
+    padding: 20px;
+}
+.memoji h1 {
+    font-size: 3em;
+    font-weight: 500;
+    margin: 0;
+}
+.memoji p {
+    font-size: 20px;
+}
+.memoji img {
+    width: 200px;
+}
+.post {
+    background-color: hsl(31, 66%, 93%);
+    padding: 20px;
+}
+.post h2 {
+    font-size: 2em;
+    font-weight: 600;
+}
+.post em {
+    color: hsl(256, 67%, 59%);
+}
+.post img {
+    width: 200px;
+}
+.chatbox {
+    background-color: hsl(39, 100%, 71%);
+    padding: 25px;
+}
+.chatbox h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+.chatbox img {
+    width: 250px;
+}
+@media(min-width:900px){
+    body{
+        height: 100vh;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: 250px 50px 150px 200px;
+        max-width: 1000px;
+        width: 100%;
+        gap: 20px;
+    }
+    .container > div {
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+    .post {
+        grid-area: 1/1/3/2;
+
+    }
+    .post img {
+        width: 180px;
+    }
+    .star {
+        grid-area: 1/2/2/4;
+    }
+    .schedule {
+        grid-area: 1/4/4/5;
+        text-align:left;
+        padding: 25px;
+        padding-right: 20px;
+    }
+    .schedule h3 {
+        margin: 0 0 20px 0;
+    }
+    .schedule img {
+        height: 250px;
+        width: 330px;
+    }
+    .schedule p {
+        margin: 20px 0;
+        font-size: 18px;
+    }
+    .chatbox {
+        grid-area: 3/1/5/2;
+    }
+    .chatbox img {
+        width: 200px;
+    }
+    .insta {
+        grid-area: 2/2/4/3;
+        padding: 20px;
+    }
+    .insta img {
+        width: 300px;
+    }
+    .calendar {
+        grid-area: 2/3/4/4;
+    }
+    .calendar img {
+        top: 10px;
+    }
+    .memoji {
+        grid-area: 4/2/5/3;
+
+    }
+    .memoji p {
+        font-size: 18px;
+    }
+    .memoji img {
+        width: 150px;
+    }
+    .followers {
+        grid-area: 4/3/5/5;
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        gap: 10px;
+    }
+    .followers p {
+        margin: auto;
+    }
+}
